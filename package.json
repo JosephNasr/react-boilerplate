@@ -1,0 +1,38 @@
+{
+  "name": "reactboilerplatetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "devServer.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.15.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.3",
+    "css-loader": "^0.28.5",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.18.2",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.18.2"
+  },
+  "scripts": {
+    "start": "node devServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosephNasr/ReactBoilerplate.git"
+  },
+  "author": "Joseph Nasr",
+  "license": "ISC"
+}
