@@ -1,4 +1,4 @@
-# react-boilerplate
+<h1>react-boilerplate</h1>
 Simple React.js Boilerplate Test
 
 
