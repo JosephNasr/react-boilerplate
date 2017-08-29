@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import style from '../App/App.css'
+
+let onSubmit = null;
 
 export default class SearchInput extends Component {
     constructor() {
         super();
-        this.onSubmit = this.onSubmit.bind(this);
+        onSubmit = this.onSubmit.bind(this);
     }
 
     onSubmit(ev) {
@@ -23,9 +26,9 @@ export default class SearchInput extends Component {
         const { initialQuery } = this.props;
         return (
             <section>
-                <form onSubmit={this.onSubmit}>
-                    <div>
-                        Enter a word or phrase:
+                <form onSubmit={onSubmit}>
+                    <div className={style.title}>
+                        Enter a word or phrase: <br/><br/>
                         <input type="text" name="query" defaultValue={initialQuery} />
                         <button type="submit">Search</button>
                     </div>

@@ -10,39 +10,30 @@ const View = ({
     RenderSearchInput, RenderImage, RenderLoading, RenderError
 }) => (
     <div>
-        <RenderSearchInput initialQuery={initialQuery} onSearch={onLoad} />
+        <SearchInput initialQuery={initialQuery} onSearch={onLoad} />
+        <br/>
         <section>
-            {
-                if (loading) {
-                    <RenderLoading /> 
-                }
-                else if (error) {
-                    <RenderError error={error} />
-                }
-                else {
-                    <RenderImage src={data} />
-                }
-            }
+            { loading ? <Loading /> : ( error ? <LoadError error={error} /> : <Image src={data} /> ) }
         </section>
     </div>
 );
 
-View.propTypes = {
-    loading: PropTypes.bool.isRequired,
-    error: PropTypes.bool.isRequired,
-    src: PropTypes.string.isRequired,
-    initialQuery: PropTypes.string.isRequired,
-    onSearch: PropTypes.func.isRequired,
-    RenderImage: PropTypes.func,
-    RenderLoading: PropTypes.func,
-    RenderError: PropTypes.func
-};
+// View.propTypes = {
+//     loading: PropTypes.bool.isRequired,
+//     error: PropTypes.bool.isRequired,
+//     src: PropTypes.string.isRequired,
+//     initialQuery: PropTypes.string.isRequired,
+//     onSearch: PropTypes.func.isRequired,
+//     RenderImage: PropTypes.func,
+//     RenderLoading: PropTypes.func,
+//     RenderError: PropTypes.func
+// };
 
-View.defaultProps = {
-    RenderSearchInput: SearchInput,
-    RenderImage: Image,
-    RenderLoading: Loading,
-    RenderError: LoadError
-};
+// View.defaultProps = {
+//     RenderSearchInput: SearchInput,
+//     RenderImage: Image,
+//     RenderLoading: Loading,
+//     RenderError: LoadError
+// };
 
 export default View;

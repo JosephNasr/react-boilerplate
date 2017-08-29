@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import View from './View';
 import loadData from './loadData';
 
+let state;
+let load;
+
 export default class extends Component {
-    state = {};
-    load = this.load.bind(this);
+    constructor() {
+        super();
+        state = {};
+        load = this.load.bind(this);
+    }
 
     async load(...args) {
         try {
@@ -18,7 +24,7 @@ export default class extends Component {
 
     render() {
         return (
-            <View {...this.props} {...this.state} onload={this.load} />
+            <View {...this.props} {...this.state} onLoad={this.load} />
         );
     }
 }
